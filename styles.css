@@ -1,0 +1,142 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* Header Section */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: lowercase;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #FF6565;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 12, 12, 0.6); /* dark overlay effect */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 20px;
+  margin-top: 100px; /* lowers the text and button */
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  background-color: #FF6565;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.subtext {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 40px;
+  color: #ffffffcc;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .cta-btn {
+    padding: 12px 28px;
+  }
+}
