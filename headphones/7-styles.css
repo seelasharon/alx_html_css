@@ -158,6 +158,11 @@ body {
 
 .service {
   max-width: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+  transform: translateY(-10px) scale(1.05);
 }
 
 .icon {
@@ -165,6 +170,11 @@ body {
   color: #FF6565;
   display: block;
   margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover .icon {
+  transform: rotate(360deg);
 }
 
 /* Our Results Section */
@@ -237,6 +247,19 @@ body {
   background-color: #FF6565;
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   opacity: 0.7;
+  animation: floatAndRotate 3s ease-in-out infinite;
+}
+
+@keyframes floatAndRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
 .stat-content {
