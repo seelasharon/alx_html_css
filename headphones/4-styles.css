@@ -1,0 +1,624 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #fff;
+  background-color: #000;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: #FF6565;
+}
+
+/* Hamburger Menu Styles */
+.nav-toggle {
+  display: none; /* Hidden by default on desktop */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 100;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("../images/headphones_hero_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  margin-top: 25px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+.btn {
+  background-color: #FF6565;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* What we do Section */
+.what-we-do {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.what-we-do h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.what-we-do .description {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.service {
+  max-width: 200px;
+}
+
+.icon {
+  font-size: 60px;
+  color: #FF6565;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Our Results Section */
+.our-results {
+  background-image: url('../images/headphones_hero_2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.our-results::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.our-results h2,
+.our-results .description,
+.our-results .results-stats {
+  position: relative;
+  z-index: 1;
+}
+
+.our-results h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.our-results .description {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+.results-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 70px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pentagon-wrapper {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pentagon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.stat-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.stat-content h3 {
+  font-size: 46px;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.stat-content p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+  .results-stats {
+    gap: 40px;
+  }
+
+  .pentagon-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .stat-content h3 {
+    font-size: 36px;
+  }
+
+  .stat-content p {
+    font-size: 12px;
+  }
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background-color: #ffffff;
+  padding: 110px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+
+.contact-container {
+  max-width: 335px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 32px;
+  color: #071629;
+  margin-bottom: 56px;
+  font-weight: 600;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 45px;
+  text-align: left;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #071629;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 100%;
+  padding: 9px 0;
+  border: none;
+  border-bottom: 1px solid #071629;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #071629;
+  background-color: transparent;
+  outline: none;
+  transition: border-bottom 0.3s ease;
+}
+
+.form-input:focus {
+  border-bottom: 2px solid #FF6565;
+}
+
+.submit-btn {
+  width: 162px;
+  height: 44px;
+  background-color: #FF6565;
+  color: #ffffff;
+  border: none;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: block;
+  margin: 55px auto 0;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #071629;
+  padding: 90px 20px 40px;
+  color: #ffffff;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.footer-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a svg {
+  transition: transform 0.3s ease;
+  fill: white;
+}
+
+.footer-social a:hover svg {
+  transform: scale(1.1);
+  fill: #FF6565;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.35;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  font-size: 14px;
+}
+
+
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 480px) {
+  .header {
+    position: relative;
+    padding: 20px;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 99;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav a {
+    margin: 20px 0;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav.active a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Hamburger Animation */
+  .nav-toggle.active .hamburger {
+    background: transparent;
+  }
+
+  .nav-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+  }
+}
+
+  /* Hero Section */
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  /* What we do Section */
+  .what-we-do {
+    padding: 50px 20px;
+  }
+
+  .services {
+    gap: 30px;
+  }
+
+  .service {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Our Results Section */
+  .our-results {
+    padding: 50px 20px;
+  }
+
+  .our-results h2 {
+    font-size: 28px;
+  }
+
+  .results-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .pentagon-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .stat-content h3 {
+    font-size: 36px;
+  }
+
+  .stat-content p {
+    font-size: 14px;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 50px 20px;
+  }
+
+  .contact-container {
+    width: 90%;
+  }
+
+  .contact-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  .form-input {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    width: 140px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 50px 20px 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-copyright {
+    font-size: 11px;
+  }
+
+
+/* Tablet Responsive Styles (optional) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .services {
+    gap: 40px;
+  }
+
+  .service {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .results-stats {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .pentagon-wrapper {
+    width: 175px;
+    height: 175px;
+  }
+
+  .contact-container {
+    width: 80%;
+  }
+}
+
+/* Common responsive rules */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .description {
+    padding: 0 20px;
+  }
+}
