@@ -251,26 +251,6 @@ body {
   margin: 0;
 }
 
-/* Mobile Responsiveness */
-@media screen and (max-width: 480px) {
-  .results-stats {
-    gap: 40px;
-  }
-
-  .pentagon-wrapper {
-    width: 150px;
-    height: 150px;
-  }
-
-  .stat-content h3 {
-    font-size: 36px;
-  }
-
-  .stat-content p {
-    font-size: 12px;
-  }
-}
-
 /* ===== CONTACT SECTION ===== */
 .contact-section {
   background-color: #ffffff;
@@ -406,65 +386,38 @@ body {
 
 
 
-/* Mobile Responsive Styles */
-@media screen and (max-width: 480px) {
+/* Add after existing CSS */
+
+@media screen and (max-width: 768px) {
+  /* Header/Navigation */
   .header {
-    position: relative;
     padding: 20px;
   }
 
   .nav-toggle {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
   }
 
   .nav {
+    display: none;
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
+    top: 80px;
+    left: 0;
+    right: 0;
     background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 99;
+    padding: 20px;
+    text-align: center;
   }
 
   .nav.active {
-    right: 0;
+    display: block;
   }
 
   .nav a {
-    margin: 20px 0;
+    display: block;
+    margin: 15px 0;
     font-size: 18px;
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 0.3s ease-in-out;
   }
-
-  .nav.active a {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  /* Hamburger Animation */
-  .nav-toggle.active .hamburger {
-    background: transparent;
-  }
-
-  .nav-toggle.active .hamburger::before {
-    transform: rotate(45deg);
-  }
-
-  .nav-toggle.active .hamburger::after {
-    transform: rotate(-45deg);
-  }
-}
 
   /* Hero Section */
   .hero {
@@ -479,50 +432,44 @@ body {
     font-size: 16px;
   }
 
-  .hero-description {
-    font-size: 14px;
-  }
-
-  /* What we do Section */
+  /* What We Do Section */
   .what-we-do {
     padding: 50px 20px;
   }
 
   .services {
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
 
   .service {
-    flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 280px;
   }
 
-  /* Our Results Section */
+  /* Results Section */
   .our-results {
     padding: 50px 20px;
-  }
-
-  .our-results h2 {
-    font-size: 28px;
   }
 
   .results-stats {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
   }
 
   .pentagon-wrapper {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .pentagon {
+    width: 150px;
+    height: 150px;
   }
 
   .stat-content h3 {
     font-size: 36px;
-  }
-
-  .stat-content p {
-    font-size: 14px;
   }
 
   /* Contact Section */
@@ -534,28 +481,9 @@ body {
     width: 90%;
   }
 
-  .contact-title {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .form-group {
-    margin-bottom: 30px;
-  }
-
-  .form-input {
-    font-size: 14px;
-  }
-
-  .submit-btn {
-    width: 140px;
-    height: 40px;
-    font-size: 13px;
-  }
-
   /* Footer */
   .footer {
-    padding: 50px 20px 30px;
+    padding: 40px 20px;
   }
 
   .footer-content {
@@ -563,62 +491,49 @@ body {
     gap: 30px;
     margin-bottom: 40px;
   }
+}
 
-  .footer-logo {
-    margin-bottom: 20px;
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
   }
 
-  .footer-social {
-    justify-content: center;
-  }
-
-  .footer-copyright {
-    font-size: 11px;
-  }
-
-
-/* Tablet Responsive Styles (optional) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .services {
-    gap: 40px;
-  }
-
-  .service {
-    flex: 0 0 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-
-  .results-stats {
-    flex-wrap: wrap;
-    gap: 40px;
+  .what-we-do h2,
+  .our-results h2,
+  .contact-title {
+    font-size: 24px;
   }
 
   .pentagon-wrapper {
-    width: 175px;
-    height: 175px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .pentagon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .stat-content h3 {
+    font-size: 30px;
   }
 
   .contact-container {
-    width: 80%;
+    width: 100%;
   }
 }
 
-/* Common responsive rules */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
+/* Add styles for active hamburger menu */
+.nav-toggle.active .hamburger {
+  background: transparent;
+}
 
-  p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
+.nav-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
 
-  h2 {
-    font-size: 28px;
-  }
-
-  .description {
-    padding: 0 20px;
-  }
+.nav-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
