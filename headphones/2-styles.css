@@ -42,13 +42,12 @@ body {
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero {
-  
+  background-image: url("images/headphones_hero_1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; /* full screen height */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,7 +92,6 @@ body {
   opacity: 0.9;
 }
 
-
 /* What we do Section */
 .what-we-do {
   background-color: #fff;
@@ -129,6 +127,41 @@ body {
   color: #FF6565;
   display: block;
   margin-bottom: 15px;
+}
+
+/* Our Results Section */
+.our-results {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.our-results h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.our-results .description {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+.results-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.results-description {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 18px;
 }
 
 /* Footer */
